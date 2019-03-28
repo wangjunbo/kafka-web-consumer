@@ -42,7 +42,16 @@ function sendName() {
 }
 
 function showGreeting(message) {
-    $("#greetings").append("<tr><td>" + message + "</td></tr>");
+
+    var txt = document.getElementById("txt").value;
+    console.log('filter content: ' + txt);
+
+    if(message.includes(txt)){
+        $("#greetings").append("<tr><td>" + message + "</td></tr>");
+    }else{
+        console.log(message+" 不包含 " + txt)
+    }
+
 }
 
 $(function () {

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Hello WebSocket</title>
+    <meta charset="UTF-8">
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
     <script src="/webjars/jquery/jquery.min.js"></script>
@@ -15,26 +16,28 @@
     Javascript and reload this page!</h2></noscript>
 <div id="main-content" class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <form class="form-inline">
                 <div class="form-group">
                     <label for="name">What is your topic?</label>
                     <select id="name" class="form-control">
                         <option>event</option>
                         <option>tracker</option>
-                        <option>test</option>
+                        <option>form</option>
                         <option>tracker-view</option>
+                        <option>test</option>
                     </select>
-
+                    <label for="name">包含</label>
+                    <input name="txt" id="txt" class="form-control"/>
                 </div>
                 <!--<button id="send" class="btn btn-default" type="submit">Send</button>-->
             </form>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             <form class="form-inline">
                 <div class="form-group">
-                    <label for="connect">Connect Kafka:</label>
+                    <!--<label for="connect">Connect Kafka:</label>-->
                     <button id="connect" class="btn btn-default" type="submit">Connect</button>
                     <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
                     </button>
@@ -48,7 +51,7 @@
             <table id="conversation" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Greetings</th>
+                    <!--<th>Greetings</th>-->
                 </tr>
                 </thead>
                 <tbody id="greetings">

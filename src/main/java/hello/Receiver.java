@@ -47,4 +47,11 @@ public class Receiver {
         greetingController.messagingTemplate.convertAndSend("/topic/event", payload);
         latch.countDown();
     }
+
+    @KafkaListener(topics = "form")
+    public void receiveForm(String payload) throws Exception {
+//        System.out.println(payload);
+        greetingController.messagingTemplate.convertAndSend("/topic/form", payload);
+        latch.countDown();
+    }
 }

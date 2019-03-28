@@ -1,1 +1,1 @@
-java -jar springwebsocket-1.jar --spring.config.location=application.properties --server.port=8080
+nohup java -jar kafka-web-consumer-1.jar --spring.config.location=application.properties --server.port=8085 >springboot.log 2>&1 &
